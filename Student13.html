@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Portal</title>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<header>
+  <div class="top-header">
+    <span class="left">OSU</span>
+    <h1 class="middle">Student Portal</h1>
+    
+  </div>
+  <div id="personal-info-section" class="section orange-section"> <!-- Added ID for personal information section -->
+    <div class="labels">
+      <label class="clickable">Personal Information</label>
+      <label class="clickable" id="semester">Semester</label>
+      <input type="checkbox" id="semesterDropdownToggle" class="dropdown-toggle">
+      <div class="dropdown" id="semesterDropdown">
+        <a href="#" class="dropdown-link">Fall-2023</a>
+        <a href="#" class="dropdown-link">Spring-2024</a>
+        <a href="#" class="dropdown-link">Fall-2024</a>
+        <a href="#" class="dropdown-link">Spring-2025</a>
+      </div>
+      <button id="logoutBtn" style="margin-left: auto;">Logout</button> <!-- Inline style added to position button to the right -->
+    </div>
+  </div>
+  <!-- Timetable section -->
+  <div id="timetable-section" class="timetable-section"> <!-- Added ID for timetable section -->
+    <h2 class="timetable-title">My Time Table</h2>
+    <table class="timetable">
+      <thead>
+        <tr>
+          <th>Course Name</th>
+          <th>Course ID</th>
+          <th>Timings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mathematics</td>
+          <td>MATH101</td>
+          <td>Mon-Wed 10:00 AM - 12:00 PM</td>
+        </tr>
+        <tr>
+          <td>Physics</td>
+          <td>PHYS101</td>
+          <td>Tue-Thu 1:00 PM - 3:00 PM</td>
+        </tr>
+        <tr>
+          <td>Computer Science</td>
+          <td>COMP101</td>
+          <td>Wed-Fri 9:00 AM - 11:00 AM</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="footer-section">
+    <ul>
+      <li>About Us</li>
+      <li>Contact Us</li>
+      <li>Feedback</li>
+    </ul>
+  </div>
+<script src="Studentportal.js"> </script>
+</header>
+</body>
+</html>
