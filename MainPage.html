@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OSU Student Grade System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      header {
+        background-color: lightgreen;
+        padding: 20px;
+        text-align: center;
+        font-size: 25px;
+        color: deeppink;
+      }
+
+      .wrapper {
+        text-align: center;
+        display: inline-block;
+        position: absolute;
+        top: 35%;
+        left: 32.5%;
+        bottom: 25%;
+      }
+
+      #button1 {
+        width: 400px;
+        height: 200px;
+        font-size: 30px;
+        color: blue;
+      }
+      #button2 {
+        width: 400px;
+        height: 200px;
+        font-size: 30px;
+        color: blue;
+      }
+      #button3 {
+        width: 400px;
+        height: 200px;
+        font-size: 30px;
+        color: blue;
+      }
+
+      #container {
+        text-align: center;
+      }
+
+      .wrapper1 {
+        text-align: left;
+        display: inline-block;
+        position: absolute;
+        top: 35%;
+        left: 1%;
+        bottom: 25%;
+      }
+      #container1 {
+        text-align: left;
+      }
+
+      footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+
+        background-color: grey;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+
+      li {
+        display: inline;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 50;
+        overflow: hidden;
+        background-color: black;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: cyan;
+        font-size: 20px;
+        text-align: center;
+        padding: 30px 50px;
+        text-decoration: none;
+      }
+
+      li a:hover:not(.active) {
+        background-color: red;
+      }
+
+      .active {
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h2>OSU Student Grade System</h2>
+    </header>
+
+    <div class="wrapper">
+      <div id="container">
+        <a href="StudentLoginPage.html"
+          ><button type="button patient-button" id="button1">Student</button></a
+        >
+        <a href="FacultyLoginPage.html"
+          ><button type="button doctor-button" id="button2">Faculty</button></a
+        >
+      </div>
+    </div>
+
+    <div class="wrapper1">
+      <div id="container1">
+        <a href="AdminLoginPage.html"
+          ><button type="button admin-button" id="button3">Admin</button></a
+        >
+      </div>
+    </div>
+
+    <footer>
+      <ul>
+        <li><a href="AboutUs.html">About us</a></li>
+        <li><a href="StudentReviews.html">Student reviews</a></li>
+        <li><a href="FacultyReviews.html">Faculty reviews</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

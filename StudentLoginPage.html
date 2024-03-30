@@ -1,0 +1,54 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student login page</title>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body style="background-color:cyan;">
+    <div style="background-color:aquamarine;">
+        <center>
+            <div>
+                <h1 style="color:green;font-size:60px;background-color:powderblue;text-align:center;">Student login page</h1>
+                <form id="loginForm" method="POST" action="http://localhost:8080/osu/loginosu">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </center>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Fetch the form data
+            const formData = new FormData(event.target);
+
+            // Send a POST request to the login endpoint
+            fetch("http://localhost:8080/osu/loginosu", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log("hello");
+                    
+                    console.log(response);
+                    // If login is successful, redirect to PatientPage.html
+                   // window.location.href = "MainPage.html";
+                  // alert("Login successfull. with user."+response);
+                  // window.location.href = "MainPage.html";
+                } else {
+                    // If login fails, display an error message
+                    alert("Login failed. Please check your username and password."+response);
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        });
+    </script>
+</body>
+</html>
